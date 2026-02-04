@@ -10,5 +10,14 @@ void setup() {
 }
 
 void loop() {
+    myServo.write(10);
+    delay(1000);
+    myServo.write(90);
+    delay(1000);
+    myServo.write(120);
+    delay(1000);
+    myServo.write(180);
+    delay(1000);
+
 // write your code here
 }
