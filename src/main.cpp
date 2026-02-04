@@ -10,14 +10,18 @@ void setup() {
 }
 
 void loop() {
-    myServo.write(10);
-    delay(1000);
-    myServo.write(90);
-    delay(1000);
-    myServo.write(120);
-    delay(1000);
-    myServo.write(180);
-    delay(1000);
+    for (int i =0; i <= 180; i += 10) {
+        myServo.write(i);
+        Serial.print("Servo Angle: ");
+        Serial.println(i);
+        delay(500);
+    }
+    for (int i =180; i >= 0; i -= 10) {
+        myServo.write(i);
+        Serial.print("Servo Angle: ");
+        Serial.println(i);
+        delay(500);
+    }
 
 // write your code here
 }
